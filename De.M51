@@ -1,0 +1,72 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        07/04/2016  16:06:24  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL\C51\BIN\BL51.EXE t.obj TO De
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  t.obj (T)
+  D:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  De (T)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     000CH     UNIT         ?C_C51STARTUP
+            CODE    080CH     0005H     UNIT         ?PR?MAIN?T
+
+
+
+OVERLAY MAP OF MODULE:   De (T)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?T
+
+
+
+SYMBOL TABLE OF MODULE:  De (T)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        T
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:00B0H         PUBLIC        P3
+  C:080CH         PUBLIC        main
+  -------         PROC          MAIN
+  C:080CH         LINE#         13
+  C:080CH         LINE#         14
+  C:080CH         LINE#         15
+  C:080CH         LINE#         16
+  C:080FH         LINE#         17
+  -------         ENDPROC       MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/04/2016  16:06:24  PAGE 2
+
+
+  -------         ENDMOD        T
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0005H BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=20
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
